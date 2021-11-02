@@ -1,0 +1,21 @@
+{% load static %}
+
+<div class="card border-0">
+    <div class="card-img-overlay d-flex justify-content-end">
+        <a href="#" class="card-link like">
+            <i class="bx bx-heart"></i>
+        </a>
+    </div>
+    <a href="{% url 'products:detail' pk=product.pk %}">
+        <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+            <img class="card-img-top" src="{{ product.cover.url }}"
+                 alt="Card image cap">
+            <img class="uk-transition-scale-up uk-position-cover"
+                 src="{{ product.image.url }}" alt="">
+        </div>
+    </a>
+    <div class="card-header bg-transparent border-bottom-0 float-left">
+        <h5 class="card-title">{{ product.title }}</h5>
+        <p class="card-text">${{ product.price }}</p>
+    </div>
+</div>

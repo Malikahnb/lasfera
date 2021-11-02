@@ -1,0 +1,375 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!-- ======= Hero Section ======= -->
+    <section class="hero-section" id="hero">
+
+        <div class="wave">
+
+            <svg width="100%" height="355px" viewBox="0 0 1920 355" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Apple-TV" transform="translate(0.000000, -402.000000)" fill="#FFFFFF">
+                        <path d="M0,439.134243 C175.04074,464.89273 327.944386,477.771974 458.710937,477.771974 C654.860765,477.771974 870.645295,442.632362 1205.9828,410.192501 C1429.54114,388.565926 1667.54687,411.092417 1920,477.771974 L1920,757 L1017.15166,757 L0,757 L0,439.134243 Z"
+                              id="Path"></path>
+                    </g>
+                </g>
+            </svg>
+
+        </div>
+
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 hero-text-image">
+                    <div class="row">
+                        <div class="col-lg-8 text-center text-lg-start">
+                            <h1 data-aos="fade-right">Измените свой маленький мир с нами</h1>
+                            <p class="mb-5" data-aos="fade-right" data-aos-delay="100">Lorem ipsum dolor sit amet,
+                                consectetur
+                                adipisicing elit.</p>
+                            <p data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500">
+                                <a href="#" class="btn btn-outline-white">Вперёд</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Hero -->
+
+
+    <main id="main">
+
+        <!--    ====== CATEGORY SECTION =======-->
+        <section id="category" class="categories">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Категории</h2>
+                    <p>Популярные категории</p>
+                </div>
+
+                <div id="category-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
+                    <div class="item web col-sm-6 col-md-4 col-lg-4 mb-4">
+                        <a href="#" class="item-wrap fancybox">
+                            <div class="work-info">
+                                <h3>Обои</h3>
+                                <!--                            <span>Web</span>-->
+                            </div>
+                            <img class="img-fluid" src="{% static 'img/wall.jpg' %}" alt="">
+                        </a>
+                    </div>
+                    <div class="item photography col-sm-6 col-md-4 col-lg-4 mb-4">
+                        <a href="#" class="item-wrap fancybox">
+                            <div class="work-info">
+                                <h3>Люстры</h3>
+                                <!--                            <span>Photography</span>-->
+                            </div>
+                            <img class="img-fluid" src="{% static 'img/products/product3.jpg' %}" alt="">
+                        </a>
+                    </div>
+                    <div class="item branding col-sm-6 col-md-4 col-lg-4 mb-4">
+                        <a href="#" class="item-wrap fancybox">
+                            <div class="work-info">
+                                <h3>Стройматериалы</h3>
+                                <!--                            <span>Branding</span>-->
+                            </div>
+                            <img class="img-fluid" src="{% static 'img/remont.jpg' %}" alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section><!-- End Categories Section -->
+
+
+        <!-- ======= products Section ======= -->
+        <section id="products" class="products">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Товары</h2>
+                    <p>Новые поступления</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6 d-flex align-items-stretch mb-4">
+                        <div class="card border-0">
+                            <div class="card-img-overlay d-flex justify-content-end">
+                                <a href="#" class="card-link like">
+                                    <i class="bx bx-heart"></i>
+                                </a>
+                            </div>
+                            <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                                <img class="card-img-top" src="{% static 'img/products/prod1.jpg' %}" alt="Card image cap">
+                                <img class="uk-transition-scale-up uk-position-cover"
+                                     src="{% static 'img/products/prod1-2.jpg' %}" alt="">
+                            </div>
+                            <div class="card-header bg-transparent border-bottom-0 float-left">
+                                <h5 class="card-title">Sit sint consectetur velit quisquam velit quisquam</h5>
+                                <p class="card-text">$460</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 d-flex align-items-stretch mb-4">
+                        <div class="card border-0">
+                            <div class="card-img-overlay d-flex justify-content-end">
+                                <a href="#" class="card-link like">
+                                    <i class="bx bx-heart"></i>
+                                </a>
+                            </div>
+                            <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                                <img class="card-img-top" src="{% static 'img/products/prod2.jpg' %}" alt="Card image cap">
+                                <img class="uk-transition-scale-up uk-position-cover"
+                                     src="{% static 'img/products/prod2-2.jpg' %}" alt="">
+                            </div>
+                            <div class="card-header bg-transparent border-bottom-0 float-left">
+                                <h5 class="card-title">Sit sint consectetur velit quisquam velit quisquam</h5>
+                                <p class="card-text">$460</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 d-flex align-items-stretch mb-4">
+                        <div class="card border-0">
+                            <div class="card-img-overlay d-flex justify-content-end">
+                                <a href="#" class="card-link like">
+                                    <i class="bx bx-heart"></i>
+                                </a>
+                            </div>
+                            <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                                <img class="card-img-top" src="{% static 'img/products/prod3.jpg' %}" alt="Card image cap">
+                                <img class="uk-transition-scale-up uk-position-cover"
+                                     src="{% static 'img/products/prod3-2.jpg' %}" alt="">
+                            </div>
+                            <div class="card-header bg-transparent border-bottom-0 float-left">
+                                <h5 class="card-title">Sit sint consectetur velit quisquam velit quisquam</h5>
+                                <p class="card-text">$460</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 d-flex align-items-stretch mb-4">
+                        <div class="card border-0">
+                            <div class="card-img-overlay d-flex justify-content-end">
+                                <a href="#" class="card-link like">
+                                    <i class="bx bx-heart"></i>
+                                </a>
+                            </div>
+                            <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                                <img class="card-img-top" src="{% static 'img/products/prod4.jpg' %}" alt="Card image cap">
+                                <img class="uk-transition-scale-up uk-position-cover"
+                                     src="{% static 'img/products/prod4-2.jpg' %}" alt="">
+                            </div>
+                            <div class="card-header bg-transparent border-bottom-0 float-left">
+                                <h5 class="card-title">Sit sint consectetur velit quisquam velit quisquam</h5>
+                                <p class="card-text">$460</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 d-flex align-items-stretch mb-4">
+                        <div class="card border-0">
+                            <div class="card-img-overlay d-flex justify-content-end">
+                                <a href="#" class="card-link like">
+                                    <i class="bx bx-heart"></i>
+                                </a>
+                            </div>
+                            <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                                <img class="card-img-top" src="{% static 'img/products/prod5.jpg' %}" alt="Card image cap">
+                                <img class="uk-transition-scale-up uk-position-cover"
+                                     src="{% static 'img/products/prod5-2.jpg' %}" alt="">
+                            </div>
+                            <div class="card-header bg-transparent border-bottom-0 float-left">
+                                <h5 class="card-title">Sit sint consectetur velit quisquam velit quisquam</h5>
+                                <p class="card-text">$460</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 d-flex align-items-stretch mb-4">
+                        <div class="card border-0">
+                            <div class="card-img-overlay d-flex justify-content-end">
+                                <a href="#" class="card-link like">
+                                    <i class="bx bx-heart"></i>
+                                </a>
+                            </div>
+                            <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                                <img class="card-img-top" src="{% static 'img/products/prod6.jpg' %}" alt="Card image cap">
+                                <img class="uk-transition-scale-up uk-position-cover"
+                                     src="{% static 'img/products/prod6-2.jpg' %}" alt="">
+                            </div>
+                            <div class="card-header bg-transparent border-bottom-0 float-left">
+                                <h5 class="card-title">Sit sint consectetur velit quisquam velit quisquam</h5>
+                                <p class="card-text">$460</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 d-flex align-items-stretch mb-4">
+                        <div class="card border-0">
+                            <div class="card-img-overlay d-flex justify-content-end">
+                                <a href="#" class="card-link like">
+                                    <i class="bx bx-heart"></i>
+                                </a>
+                            </div>
+                            <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                                <img class="card-img-top" src="{% static 'img/products/prod7.jpg' %}" alt="Card image cap">
+                                <img class="uk-transition-scale-up uk-position-cover"
+                                     src="{% static 'img/products/prod7-2.jpg' %}" alt="">
+                            </div>
+                            <div class="card-header bg-transparent border-bottom-0 float-left">
+                                <h5 class="card-title">Sit sint consectetur velit quisquam velit quisquam</h5>
+                                <p class="card-text">$460</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 d-flex align-items-stretch mb-4">
+                        <div class="card border-0">
+                            <div class="card-img-overlay d-flex justify-content-end">
+                                <a href="#" class="card-link like">
+                                    <i class="bx bx-heart"></i>
+                                </a>
+                            </div>
+                            <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                                <img class="card-img-top" src="{% static 'img/products/product2.jpg' %}" alt="Card image cap">
+                                <img class="uk-transition-scale-up uk-position-cover"
+                                     src="{% static 'img/products/prod1-2.jpg' %}" alt="">
+                            </div>
+                            <div class="card-header bg-transparent border-bottom-0 float-left">
+                                <h5 class="card-title">Sit sint consectetur velit quisquam velit quisquam</h5>
+                                <p class="card-text">$460</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section><!-- End products Section -->
+
+
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Услуги</h2>
+                    <p>Мы гарантируем</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-timeline" data-aos="fade-left">
+                            <a href="#" class="timeline" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="timeline-icon"><i class="bx bx-globe"></i></div>
+                                <div class="timeline-content">
+                                    <h3 class="title">Dorime interimo</h3>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ducimus
+                                        officiis quod! Aperiam eveniet nam nostrum odit quasi ullam voluptatum.
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="#" class="timeline" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="timeline-icon"><i class="bx bx-rocket"></i></div>
+                                <div class="timeline-content">
+                                    <h3 class="title">Lorem ipsum</h3>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ducimus
+                                        officiis quod! Aperiam eveniet nam nostrum odit quasi ullam voluptatum.
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="#" class="timeline" data-aos="zoom-in" data-aos-delay="300">
+                                <div class="timeline-icon"><i class="bx bx-briefcase"></i></div>
+                                <div class="timeline-content">
+                                    <h3 class="title">Dolor sit</h3>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ducimus
+                                        officiis quod! Aperiam eveniet nam nostrum odit quasi ullam voluptatum.
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="#" class="timeline" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="timeline-icon"><i class="bx bx-mobile"></i></div>
+                                <div class="timeline-content">
+                                    <h3 class="title">Amet consectetur</h3>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ducimus
+                                        officiis quod! Aperiam eveniet nam nostrum odit quasi ullam voluptatum.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section><!-- End Services Section -->
+
+
+        <!-- ======= Subscribe Section ======= -->
+        <section id="subscribe">
+            <div class="container wow fadeInUp">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3 class="subscribe-title">Присоединяйтесь в наш канал</h3>
+                        <p class="subscribe-text">В нашем Телеграм канале вы сможете узнать первыми о новостяхб акциях и
+                            скидках</p>
+                    </div>
+                    <div class="col-md-4 subscribe-btn-container">
+                        <a class="subscribe-btn" href="#">Присоединиться</a>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Subscribe Section -->
+
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Контакты</h2>
+                    <p>Мы рады с вами поговорить</p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
+                        <div class="info">
+                            <div class="address">
+                                <i class='bx bx-location-plus'></i>
+                                <h4>Адрес:</h4>
+                                <p>Лорем Ипсум, Такент, Узбекистан</p>
+                            </div>
+
+                            <div class="email">
+                                <i class='bx bx-envelope'></i>
+                                <h4>Email:</h4>
+                                <p>info@example.com</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class='bx bx-phone'></i>
+                                <h4>Позвоните:</h4>
+                                <p>+998 99 1234567</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.5596683918443!2d69.15967281495314!3d41.25314861226994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae89db84b4749d%3A0x7b6e277d32418017!2sBektopi%20Stroy%20Market!5e0!3m2!1sen!2s!4v1634550305787!5m2!1sen!2s"
+                                width="800" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Contact Section -->
+
+    </main><!-- End #main -->
+
+{% endblock %}

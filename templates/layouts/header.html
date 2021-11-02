@@ -1,0 +1,73 @@
+{% load static %}
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+        <a href="{% url 'pages:home' %}" class="logo"><img src="{% static 'img/logotip.png' %}" alt="" class="img-fluid"></a>
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+                <li {% if request.path == '/' %}class="active"{% endif %}><a href="{% url 'pages:home' %}">Главное</a></li>
+                <li class="dropdown"><a href="{% url 'products:list' %}"><span>Люстры</span> <i
+                        class='bx bx-chevron-down'></i></a>
+                    <ul>
+                        <li><a href="#">Классические</a></li>
+                        <li><a href="#">Неоклассика</a></li>
+                        <li><a href="#">HI-TECH</a></li>
+                        <li><a href="#">Модерн</a></li>
+                        <li><a href="#">Лофт</a></li>
+                        <li><a href="#">Марокканские</a></li>
+                        <!--                        dropdown-->
+                        <li><a>Галогенные</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Обои</a></li>
+                <li class="dropdown"><a href="#"><span>Стройматериалы</span> <i class='bx bx-chevron-down'></i></a>
+                    <ul>
+                        <li><a href="#">Сантехника</a></li>
+                        <li><a href="#">Двери</a></li>
+                        <li><a href="#">Полы</a></li>
+                        <li><a href="#">Строительное оборудование</a></li>
+                        <li><a href="#">Джакузи</a></li>
+                        <li><a href="#">Плитки</a></li>
+                        <li><a href="#">Черепицы</a></li>
+                    </ul>
+                </li>
+                <li {% if request.path == '/contact/' %}class="active"{% endif %}><a href="{% url 'pages:contact' %}">Контакты</a></li>
+            </ul>
+            <i class='bx bx-menu-alt-right mobile-nav-toggle'></i>
+        </nav><!-- .navbar -->
+
+        <!--        <div class="header-social-links">-->
+        <div class="nav-overlay uk-navbar-right">
+            <a class="uk-navbar-toggle" uk-search-icon uk-toggle="target: .nav-overlay; animation: uk-animation-fade"
+               href="#"></a>
+        </div>
+
+        <div class="nav-overlay uk-navbar-left uk-flex-1" hidden>
+            <div class="uk-navbar-item uk-width-expand">
+                <form class="uk-search uk-search-navbar uk-width-1-1">
+                    <input class="uk-search-input" type="search" placeholder="Search" autofocus>
+                </form>
+            </div>
+
+            <a class="uk-navbar-toggle" uk-close uk-toggle="target: .nav-overlay; animation: uk-animation-fade"
+               href="#"></a>
+        </div>
+        <span class="icons">
+        <a href="#" class="lang">
+             <div class="offcanvas__top__hover">
+                <span>RU <i class="arrow_carrot-down"></i></span>
+                <ul>
+                    <li>UZ</li>
+                </ul>
+            </div>
+        </a>
+        <a href="#" class="wishlist"><i class='bx bx-heart'></i></a>
+        <a href="#" class="cart"><i class='bx bx-shopping-bag'></i></a>
+        </span>
+    </div>
+
+</header>
+<!-- End Header -->

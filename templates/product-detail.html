@@ -1,0 +1,263 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs" style="margin-top: 5rem;">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li>Shop</li>
+                        <li>Product</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section><!-- End Breadcrumbs -->
+
+
+        <!--================ Product Detailed Photo   =============-->
+        <section>
+            <div class="container">
+
+                <div class="row">
+                    <div class="col col-lg-6 col-sm-12">
+                        <div class="detail-img">
+                            <div class="swiper mySwiper">
+                                <div class="card-img-overlay d-flex justify-content-end">
+                                    <a href="#" class="card-link like">
+                                        <i class="bx bx-heart"></i>
+                                    </a>
+                                </div>
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="{% static 'img/products/prod1.jpg' %}" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="{% static 'img/products/prod1-2.jpg' %}" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="{% static 'img/products/detail1.jpg' %}" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="{% static 'img/products/detail1-2.jpg' %}" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="{% static 'img/products/detail1-3.jpg' %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-scrollbar"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-lg-6 col-sm-12">
+                        <div class="product-name">
+                            <h2>{{ object.title }}</h2>
+                        </div>
+                        <div class="product-price">
+                            <p>${{ object.price }}</p>
+                        </div>
+
+                        <ul class="switcher" uk-tab>
+                            <li><a href="#">Общие</a></li>
+                            <li><a href="#">Характеристики</a></li>
+                            <li><a href="#">Информация</a></li>
+                        </ul>
+
+                        <ul class="uk-switcher uk-margin">
+                            <li class="uk-dropcap">{{ object.description }}</li>
+                            <li>{{ object.features }}</li>
+                            {#                            <li class="uk-dropcap">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum#}
+                            {#                                dolore#}
+                            {#                                eu fugiat nulla#}
+                            {#                                pariatur, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed#}
+                            {#                                do#}
+                            {#                                eiusmod tempor incididunt ut#}
+                            {#                                labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit,#}
+                            {#                                sed#}
+                            {#                                do#}
+                            {#                                eiusmod tempor incididunt ut#}
+                            {#                                labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,#}
+                            {#                                sed#}
+                            {#                                do#}
+                            {#                                eiusmod tempor incididunt ut#}
+                            {#                                labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,#}
+                            {#                                sed#}
+                            {#                                do#}
+                            {#                                eiusmod tempor incididunt ut#}
+                            {#                                labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,#}
+                            {#                                sed#}
+                            {#                                do#}
+                            {#                                eiusmod tempor incididunt ut#}
+                            {#                                labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit,#}
+                            {#                                sed#}
+                            {#                                do#}
+                            {#                                eiusmod tempor incididunt ut#}
+                            {#                                labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,#}
+                            {#                                sed#}
+                            {#                                do#}
+                            {#                                eiusmod tempor incididunt ut#}
+                            {#                                labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,#}
+                            {#                                sed#}
+                            {#                                do#}
+                            {#                                eiusmod tempor incididunt ut#}
+                            {#                                labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,#}
+                            {#                                sed#}
+                            {#                                do#}
+                            {#                                eiusmod tempor incididunt ut#}
+                            {##}
+                            {#                            </li>#}
+                        </ul>
+
+                        <hr>
+
+
+                        <div class="product-size">
+                            <p>Выберите размер: </p>
+                            <div>
+                                <a href="#" class="btn-select btn-outline-white">{{ object.size }}</a>
+                            </div>
+                        </div>
+
+                        <div class="product-color">
+                            <p>Выберите цвет: </p>
+                            <div class="color-box">
+                                <a id="red">{{ object.color }}</a>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <div>
+                            <div class="uk-inline">
+                                <button class="uk-button uk-button-default" type="button">1<i class="bx bx-chevron-down"
+                                                                                              style="padding-left: 3px"></i>
+                                </button>
+                                <!--                        drop to doooooooown     -->
+                                <div uk-dropdown="mode: click; boundary: .my-class">
+                                    <ul class="uk-list uk-align-center">
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">6</a></li>
+                                        <li><a href="#">7</a></li>
+                                        <li><a href="#">8</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="add-to-cart">
+                                <a href="#" class="btn-select add-to-cart">Добавить в корзину</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--================ Carousel   =============-->
+        <section style="background-color: #F3F3F3">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Почему это?</h2>
+                    <p>Вы полюбите этот товар</p>
+                </div>
+
+                <div uk-slideshow="min-height: 300; max-height: 600">
+
+                    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+
+                        <ul class="uk-slideshow-items">
+                            <li>
+                                <img src="{% static 'img/wallpaper.jpg' %}" alt="" uk-cover>
+                            </li>
+                            <li>
+                                <img src="{% static 'img/banner.jpg' %}" alt="" uk-cover>
+                            </li>
+                            <li>
+                                <img src="{% static 'img/stroy.jpg' %}" alt="" uk-cover>
+                            </li>
+                        </ul>
+
+
+                        <a class="uk-position-center-left uk-position-small uk-slidenav-large navigation" href="#"
+                           uk-slidenav-previous
+                           uk-slideshow-item="previous"></a>
+                        <a class="uk-position-center-right uk-position-small uk-slidenav-large navigation" href="#"
+                           uk-slidenav-next
+                           uk-slideshow-item="next"></a>
+
+                    </div>
+
+                    <div class="slider-caption">
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla
+                            pariatur, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!--================ Services   =============-->
+        <section style="background-color: #f3f2ee">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-3 col-sm-3 service">
+                        <h3>С нами легко</h3>
+                    </div>
+                    <div class="col-lg-3 col-sm-3 service">
+                        <i class="bx bx-buildings service-icon"></i>
+                        <p class="description">Увидеть лично</p>
+                        <a href="{% url 'pages:contact' %}">Найти магазин</a>
+                    </div>
+                    <div class="col-lg-3 col-sm-3 service">
+                        <i class='bx bxs-truck service-icon'></i>
+                        <p class="description">Быстрая доставка</p>
+                    </div>
+                    <div class="col-lg-3 col-sm-3 service">
+                        <i class='bx bx-wrench service-icon'></i>
+                        <p class="description">Установка профессионалами</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!--================ Related products   =============-->
+        <section>
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Посмотрите</h2>
+                    <p>Похожие товары</p>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 d-flex align-items-stretch mb-4">
+                        {% include 'layouts/product-block.html' %}
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+{% endblock %}
