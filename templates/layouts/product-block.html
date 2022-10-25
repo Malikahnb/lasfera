@@ -6,6 +6,7 @@
             <i class="bx bx-heart"></i>
         </a>
     </div>
+    {{ product.pk }}
     <a href="{% url 'products:detail' pk=product.pk %}">
         <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
             <img class="card-img-top" src="{{ product.cover.url }}"

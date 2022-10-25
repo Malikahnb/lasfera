@@ -3,7 +3,7 @@ from django.utils.translation import gettext_lazy as _
 
 
 class HomeModel(models.Model):
-    banner = models.ImageField(upload_to='banner', verbose_name=_('banner'))
+    banner = models.ImageField(upload_to='banner', null=True, blank=True, verbose_name=_('banner'))
     title = models.CharField(max_length=255, verbose_name=_('title'))
     description = models.CharField(max_length=255, verbose_name=_('description'))
 
@@ -17,7 +17,7 @@ class HomeModel(models.Model):
         verbose_name_plural = _('homes')
 
 
-class PopCategoryModel(models.Model):
+class PopularModel(models.Model):
     image = models.ImageField(upload_to='category', verbose_name=_('image'))
     name = models.CharField(max_length=50, verbose_name=_('name'))
 
@@ -27,8 +27,8 @@ class PopCategoryModel(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = _('pop category')
-        verbose_name_plural = _('pop categories')
+        verbose_name = _('popular')
+        verbose_name_plural = _('populars')
 
 
 class ServicesModel(models.Model):

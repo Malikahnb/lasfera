@@ -16,7 +16,7 @@
             <th>Image</th>
         </tr>
         </thead>
-        <tbody id="currency-table">
+        <tbody id="product-table">
 
         </tbody>
     </table>
@@ -27,15 +27,16 @@
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script>
     $(function () {
-        $.getJSON('link', function (data) {
-            for (const currency of data) {
+        $.getJSON('http://127.0.0.1:8000/api/products/', function (data) {
+            console.log(data)
+            for (const product of data) {
                 let row = '<tr>';
-                row += '<td>' + currency.id + '<td>'
-                row += '<td>' + currency.title + '<td>'
-                row += '<td>' + currency.price + '<td>'
-                row += '<td>' + currency.image + '<td>'
+                row += '<td>' + product.id + '<td>'
+                row += product.title
+                row += '<td>' + product.price + 'USD' + '<td>'
+                row += product.cover
                 row += '</tr>'
-                $('#currency-table').append(row);
+                $('#product-table').append(row);
             }
         })
     })

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from pages.models import HomeModel, PopCategoryModel, ServicesModel
+from pages.models import HomeModel, PopularModel, ServicesModel
 
 
 @admin.register(HomeModel)
@@ -10,7 +10,7 @@ class HomeModelAdmin(admin.ModelAdmin):
     search_fields = ['created_at', 'title']
 
 
-@admin.register(PopCategoryModel)
+@admin.register(PopularModel)
 class PopCategoryModelAdmin(admin.ModelAdmin):
     list_display = ['name', 'image', 'created_at']
     list_filter = ['created_at', 'name', 'image']

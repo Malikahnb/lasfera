@@ -367,7 +367,10 @@ ul {
 --------------------------------------------------------------*/
 .hero-section {
     background: url(../img/bannerlastt1.jpg);
-    position: relative;
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*position: relative;*/
 }
 
 .hero-section .wave {

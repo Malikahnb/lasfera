@@ -39,6 +39,17 @@ class SizeModel(models.Model):
         verbose_name_plural = _('sizes')
 
 
+class ProductImageModel(models.Model):
+    photos = models.ImageField(upload_to='products', verbose_name=_('photos'))
+
+    def __str__(self):
+        return self.photos
+
+    class Meta:
+        verbose_name = _('product')
+        verbose_name_plural = _('products')
+
+
 class ProductModel(models.Model):
     title = models.CharField(max_length=200, verbose_name=_('title'))
     price = models.FloatField(verbose_name=_('price'))
@@ -92,3 +103,5 @@ class ProductDetailModel(models.Model):
     class Meta:
         verbose_name = _('product detail')
         verbose_name_plural = _('product details')
+
+
